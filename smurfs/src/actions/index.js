@@ -1,1 +1,1 @@
-export {getSmurfs, FETCH_SMURFS_START, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_FAILURE} from './smurfActions';
+export {getSmurfs, sendSmurfs, FETCH_SMURFS_START, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_FAILURE, SEND_SMURFS_START} from './smurfActions';

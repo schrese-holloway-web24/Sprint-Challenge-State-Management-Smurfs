@@ -1,12 +1,13 @@
-import {FETCH_SMURFS_START, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_FAILURE} from '../actions';
+import {FETCH_SMURFS_START, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_FAILURE, SEND_SMURFS_START} from '../actions';
 
 const initialState = {
     smurf: null,
     isFetchcing: false,
     error: '',
-    newSmurf: [
-        
-    ]
+    name: '',
+    height: '', 
+    age: '', 
+    id: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -29,6 +30,13 @@ export const reducer = (state = initialState, action) => {
                 ...state, 
                 isFetchcing: false,
                 error: action.payload
+            }
+        case SEND_SMURFS_START: 
+            return {
+                ...state, 
+                isFetching: true, 
+                error: '', 
+                smurf: {}
             }
         default: 
             return state;

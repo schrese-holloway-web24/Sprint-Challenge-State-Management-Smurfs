@@ -12,6 +12,7 @@ const Smurfs = props => {
     return (
         <div>
             <h1>Here are the smurfs, I guess? </h1>
+            <button onClick = {props.getSmurfs}>Begin</button>
             {!props.smurf && !props.isFetching && <p>Click to get some smurfs!</p>}
             {props.isFetching && (
             <Loader 
@@ -32,7 +33,7 @@ const Smurfs = props => {
             {/* {props.smurf && <p>{props.smurf.name}</p>}
             {props.smurf && <p>Age: {props.smurf.age}</p>}
             {props.smurf && <p>Height: {props.smurf.height}</p>} */}
-            <button onClick = {props.getSmurfs}>Smurf</button>
+            
         </div>
     )
 }
