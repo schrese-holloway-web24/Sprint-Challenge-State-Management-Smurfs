@@ -5,6 +5,7 @@ import Loader from 'react-loader-spinner';
 //actions
 import {getSmurfs} from '../actions';
 
+
 const Smurfs = props => {
     console.log('props from smurfs', props)
 
@@ -20,10 +21,17 @@ const Smurfs = props => {
                 width={40} />
             
             )}
+            {props.smurf && props.smurf.map(s => (
+                <div key = {s.id}>
+                    <h4>{s.name}</h4>
+                    <p>Age: {s.age}</p>
+                    <p>Height: {s.height}</p>
+                </div>
+            ))}
             
-            {props.smurf && <p>{props.smurf.name}</p>}
+            {/* {props.smurf && <p>{props.smurf.name}</p>}
             {props.smurf && <p>Age: {props.smurf.age}</p>}
-            {props.smurf && <p>Height: {props.smurf.height}</p>}
+            {props.smurf && <p>Height: {props.smurf.height}</p>} */}
             <button onClick = {props.getSmurfs}>Smurf</button>
         </div>
     )

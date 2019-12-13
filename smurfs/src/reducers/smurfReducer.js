@@ -5,9 +5,7 @@ const initialState = {
     isFetchcing: false,
     error: '',
     newSmurf: [
-        {
-
-        }
+        
     ]
 }
 
