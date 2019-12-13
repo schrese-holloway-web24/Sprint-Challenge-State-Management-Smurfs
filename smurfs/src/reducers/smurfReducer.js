@@ -4,10 +4,10 @@ const initialState = {
     smurf: null,
     isFetchcing: false,
     error: '',
-    name: '',
-    height: '', 
-    age: '', 
-    id: ''
+    // name: '',
+    // height: '', 
+    // age: '', 
+    // id: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -31,13 +31,13 @@ export const reducer = (state = initialState, action) => {
                 isFetchcing: false,
                 error: action.payload
             }
-        case SEND_SMURFS_START: 
-            return {
-                ...state, 
-                isFetching: true, 
-                error: '', 
-                smurf: {}
-            }
+        // case SEND_SMURFS_START: 
+        //     return {
+        //         ...state, 
+        //         isFetching: true, 
+        //         error: '', 
+        //         smurf: {}
+        //     }
         default: 
             return state;
     }

@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner';
 
 //actions
 import {getSmurfs} from '../actions';
+// import NewSmurfForm from './NewSmurfForm';
 
 
 const Smurfs = props => {
@@ -27,7 +28,9 @@ const Smurfs = props => {
                     <h4>{s.name}</h4>
                     <p>Age: {s.age}</p>
                     <p>Height: {s.height}</p>
+                    {/* <NewSmurfForm /> */}
                 </div>
+                
             ))}
             
             {/* {props.smurf && <p>{props.smurf.name}</p>}
